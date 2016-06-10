@@ -9,21 +9,34 @@ file { 'bash_profile':
   content => file('bash/bash_profile'),
 }
 
-git::config { 'user.email':
-  value => 'john.doe@example.com',
-}
-
-
 package { 'pkg-config':
   ensure => 'latest',
 }
 package { 'libgsl0-dev':
   ensure => 'latest',
 }
-package { 'git-dev':
+package { 'git':
   ensure => 'latest',
 }
 package { 'libjson-glib-dev':
+  ensure => 'latest',
+}
+package { 'automake':
+  ensure => 'latest',
+}
+package { 'python-pip':
+  ensure => 'latest',
+}
+package { 'python-pygments':
+  ensure => 'latest',
+}
+package { 'python-dateutil':
+  ensure => 'latest',
+}
+package { 'python-jinja2':
+  ensure => 'latest',
+}
+package { 'python-requests':
   ensure => 'latest',
 }
 
