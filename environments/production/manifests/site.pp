@@ -21,7 +21,13 @@ package { 'git':
 package { 'libjson-glib-dev':
   ensure => 'latest',
 }
+package { 'autoconf':
+  ensure => 'latest',
+}
 package { 'automake':
+  ensure => 'latest',
+}
+package { 'libtool':
   ensure => 'latest',
 }
 package { 'python-pip':
@@ -38,7 +44,10 @@ package { 'python-jinja2':
 }
 package { 'python-requests':
   ensure => 'latest',
-}
+} 
+package { 'libjansson-dev':
+  ensure => 'latest',
+} 
 
 class { 'boundary':
     token => $api_token,
